@@ -24,14 +24,12 @@ public class KafkaConfig {
 
         // Creating a Map of string-object pairs
         Map<String, Object> config = new HashMap<>();
-
         // Adding the Configuration
-        config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrap_server); //"127.0.0.1:9092"
+        config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrap_server); // "127.0.0.1:9092"
         config.put(ConsumerConfig.GROUP_ID_CONFIG, AppConstants.GROUP_ID);
         config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         config.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 
         return new DefaultKafkaConsumerFactory<>(config);
     }
-
 }
