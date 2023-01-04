@@ -34,19 +34,4 @@ public class KafkaConfig {
         return new DefaultKafkaConsumerFactory<>(config);
     }
 
-    // Creating a Listener
-    /*public ConcurrentKafkaListenerContainerFactory
-    concurrentKafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, String> factory
-                = new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(consumerFactory());
-        return factory;
-    }*/
-
-    /*  OR (we can create the bean for topic in other way) */
-    /*@Bean
-    public NewTopic createTopic(){
-        return TopicBuilder.name(AppConstants.TOPIC_NAME)
-                .build();
-    }*/
 }
